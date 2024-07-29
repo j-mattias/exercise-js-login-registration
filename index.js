@@ -1,10 +1,11 @@
+const passwordLen = 8;
 setup();
 
 function setup() {
   const users = JSON.parse(localStorage.getItem("users")) || [];
   console.log("Current storage: ", users);
 
-  checkPasswordLength(8);
+  checkPasswordLength(passwordLen);
   validateRegistration(users);
   validateLogin(users);
 }
@@ -66,8 +67,8 @@ function validateRegistration(users) {
         throw new Error("Email is taken");
       } else if (password1 !== password2) {
         throw new Error("Passwords do not match");
-      } else if (password1.length < 8) {
-        throw new Error("Password must be at least 8 characters long");
+      } else if (password1.length < passwordLen) {
+        throw new Error(`Password must be at least ${passwordLen} characters long`);
       } else {
         const user = {
           name: formatName(name),
