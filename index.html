@@ -1,12 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css">
-  <title>Account Registration</title>
-</head>
-<body>
-  <script src="index.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Account Registration</title>
+  </head>
+  <body>
+    <section id="alert"></section>
+
+    <form id="regForm">
+      <h3>Register account</h3>
+      <label for="regName">Full name</label>
+      <input id="regName" type="text" placeholder="John Smith" />
+
+      <label for="regUsername">Username</label>
+      <input id="regUsername" type="text" placeholder="Username" />
+
+      <label for="regEmail">Email</label>
+      <input id="regEmail" type="email" placeholder="username@domain.com" />
+
+      <label for="regPassword1">Password</label>
+      <input id="regPassword1" type="password" placeholder="Password" />
+
+      <label for="regPassword2">Confirm Password</label>
+      <input id="regPassword2" type="password" placeholder="Confirm Password" />
+
+      <button id="regSubmit" type="submit">Register</button>
+    </form>
+
+    <!-- <form id="loginForm"> -->
+    <form id="loginForm" class="hidden">
+      <h3>Sign in</h3>
+      <label for="loginUsername">Username</label>
+      <input id="loginUsername" type="text" placeholder="Username" />
+
+      <label for="loginPassword">Password</label>
+      <input id="loginPassword" type="password" placeholder="Password" />
+
+      <button id="loginSubmit" type="submit">Login</button>
+    </form>
+
+    <script src="index.js"></script>
+  </body>
 </html>
